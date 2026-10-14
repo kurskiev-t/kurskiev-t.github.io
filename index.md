@@ -76,7 +76,7 @@ Backend нового веб-сервиса лотерей на ASP.NET Core.
 <details class="chronology">
 <summary>Вся хронология — остальные места работы</summary>
 <div class="chronology-body">
-<p class="chronology-note">Без повтора блоков выше (Amdocs, Столото, ВШЭ). По убыванию дат.</p>
+<p class="chronology-note" hidden>Без повтора блоков выше (Amdocs, Столото, ВШЭ). По убыванию дат.</p>
 
 <div class="job">
 <strong>Разработчик C# — Айтик</strong><br>
