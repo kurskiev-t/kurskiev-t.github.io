@@ -151,7 +151,7 @@ Backend нового веб-сервиса лотерей на ASP.NET Core.
 | | |
 | --- | --- |
 | **Телефон** | [+7 (903) 500-57-67](tel:+79035005767) |
-| **Telegram** | [@kurskievt](https://t.me/kurskievt) |
+| **Telegram** | [@timur_kurskiev](https://t.me/timur_kurskiev) |
 | **Email** | [kurskievtr@gmail.com](mailto:kurskievtr@gmail.com) |
 | **GitHub** | [github.com/kurskiev-t](https://github.com/kurskiev-t) |
 | **Город** | Москва |
