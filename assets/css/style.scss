@@ -1,0 +1,56 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+details.chronology {
+  margin: 1.25rem 0 0.5rem;
+  padding: 0.85rem 1rem 0.95rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+details.chronology > summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  color: #267cb9;
+  user-select: none;
+}
+
+details.chronology > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.chronology > summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.45em;
+  transition: transform 0.15s ease;
+}
+
+details.chronology[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+details.chronology > summary:hover {
+  color: #0366d6;
+}
+
+details.chronology .chronology-note {
+  margin: 0.75rem 0 0.25rem;
+  color: #6a737d;
+  font-size: 0.92em;
+}
+
+details.chronology h4 {
+  margin-top: 1.1rem;
+  margin-bottom: 0.2rem;
+  font-size: 1.05em;
+}
+
+details.chronology p,
+details.chronology em {
+  margin-top: 0.15rem;
+}
