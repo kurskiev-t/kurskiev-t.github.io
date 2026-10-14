@@ -1,0 +1,6 @@
+*.txt
+prokshino_it_ads_summary.md
+photo_2026-*.jpg
+~$*
+.DS_Store
+Thumbs.db
