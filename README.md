@@ -1,165 +1,167 @@
 # C# / .NET Backend Developer (Middle+)
 
-**Открыт к предложениям** — удалённо / гибрид · Москва · самозанятый
+[English](README.md) | [Russian](README.ru.md)
 
-### Кратко
+**Open to offers** — in Moscow: remote / hybrid / office / any format. Remotely — open to offers from any region or country. Also considering relocation.
 
-Middle+ Backend-разработчик с **9+ лет** опыта в IT и **5+ лет** коммерческой разработки на .NET. Специализируюсь на микросервисах: ASP.NET Core, GraphQL, RabbitMQ, PostgreSQL, Docker. На проекте для Билайна (Amdocs) реализовал интеграцию данных сетевой инфраструктуры из legacy-сервиса на Oracle в новую платформу и ускорил загрузку примерно в 2 раза.
+### Summary
 
-Выпускник **МГТУ им. Баумана** (ИУ3). Английский — C1.
+Middle+ backend developer with **9+ years** in IT and **5+ years** of commercial .NET development. I specialize in microservices: ASP.NET Core, GraphQL, RabbitMQ, PostgreSQL, Docker. On a Beeline (Amdocs) project, I integrated network-infrastructure data from a legacy Oracle service into a new platform and cut load time by about 2x.
 
----
-
-## Навыки
-
-- **Языки и платформы:** C#, .NET 8, ASP.NET Core
-- **Архитектура:** микросервисы, REST API, GraphQL (HotChocolate), CQRS, Event Sourcing, Clean Architecture, MediatR
-- **Данные:** PostgreSQL, MS SQL, MongoDB, EF Core
-- **Инфраструктура:** RabbitMQ, MassTransit, Quartz.NET, Docker, GitLab CI/CD
-- **Тесты:** xUnit, unit / модульные тесты
-- **Прочее:** Git, Scrum/Agile, PowerShell
+Graduate of **Bauman Moscow State Technical University** (IU3). English — C1.
 
 ---
 
-## Опыт работы
+## Skills
 
-### .NET-разработчик — независимая разработка
-*Июнь 2025 — настоящее время*
-
-Самостоятельные продукты на C# / .NET и точечные задачи по сопровождению. Основные проекты — User Secrets Manager и BuzzMini — описаны в [разделе «Проекты»](#проекты).
-
----
-
-### Software Development Specialist — Amdocs / Билайн  
-*Ноябрь 2023 — Июнь 2025 · 1 год 8 месяцев*
-
-- Backend системы учёта сетевой инфраструктуры, оборудования и связей для Билайна: доработка функциональности, PostgreSQL, GraphQL API (HotChocolate) и EF Core, MediatR, Docker, GitLab CI/CD, unit- и интеграционные тесты (xUnit).
-- Реализовал интеграцию данных из legacy-сервиса на Oracle в микросервисную платформу на .NET и PostgreSQL. В каждой интеграции данные попадали в staging-таблицы: в части сценариев загружал их сам через HttpClient по Swagger-контракту пакетами около 10 000 записей, в других работал с данными, которые в те же таблицы уже загружала сторона Beeline. Обработчик на Quartz.NET и CQRS сверял staging с предыдущим снимком, собирал внутренние сущности (в том числе когда одна сущность источника раскладывалась на несколько) и публиковал изменения в RabbitMQ / MassTransit.
-- Доработал уже работавшую в production интеграцию: инкрементальная выборка по дате изменения, пакеты с размерами из конфигурации (чтение по 10 000, дальнейшая обработка по 1 000), оптимизация запросов и согласование индексов со специалистами Beeline. Время загрузки данных для смежных интеграций сократилось примерно в 2 раза — с 30–60 до 15–30 минут.
-- Дорабатывал консьюмеры в смежных микросервисах, включая обработку через DLX.
-- Доработал выделение IP-адресов (в том числе Loopback и P2P между устройствами) при незаконченном и противоречивом ТЗ: собрал старые и новые требования, сверил документацию внешнего API с реальным поведением, добавил эндпоинты под сценарии и довёл функционал до production, в том числе добиваясь исправления ошибок на стороне API заказчика.
-
-**Стек:** .NET 6 / ASP.NET Core 8, GraphQL, EF Core, MediatR, RabbitMQ, MassTransit, Quartz.NET, PostgreSQL, Docker, xUnit, GitLab
+- **Languages & platforms:** C#, .NET 8, ASP.NET Core
+- **Architecture:** microservices, REST API, GraphQL (HotChocolate), CQRS, Event Sourcing, Clean Architecture, MediatR
+- **Data:** PostgreSQL, MS SQL, MongoDB, EF Core
+- **Infrastructure:** RabbitMQ, MassTransit, Quartz.NET, Docker, GitLab CI/CD
+- **Testing:** xUnit, unit / module tests
+- **Other:** Git, Scrum/Agile, PowerShell
 
 ---
 
-### Разработчик — Столото  
-*Август 2020 — Январь 2021 · 6 месяцев*
+## Work experience
 
-Backend нового веб-сервиса лотерей на ASP.NET Core.
+### .NET Developer — independent work
+*June 2025 — present*
+
+Independent C# / .NET products and targeted maintenance. Main projects — User Secrets Manager and BuzzMini — are in [Projects](#projects).
+
+---
+
+### Software Development Specialist — Amdocs / Beeline  
+*November 2023 — June 2025 · 1 year 8 months*
+
+- Backend for a Beeline system that tracks network infrastructure, equipment, and connections: feature work, PostgreSQL, GraphQL API (HotChocolate) and EF Core, MediatR, Docker, GitLab CI/CD, unit and integration tests (xUnit).
+- Built data integration from a legacy Oracle service into a .NET and PostgreSQL microservice platform. In each integration, data landed in staging tables: in some scenarios I loaded it myself via HttpClient against a Swagger contract in batches of about 10,000 records; in others I worked with data that Beeline had already loaded into the same tables. A Quartz.NET and CQRS handler compared staging with the previous snapshot, assembled internal entities (including when one source entity mapped to several), and published changes to RabbitMQ / MassTransit.
+- Improved an already-running production integration: incremental fetch by change date, configurable batch sizes (read 10,000, further processing 1,000), query optimization, and index alignment with Beeline specialists. Load time for related integrations dropped by about 2x — from 30–60 to 15–30 minutes.
+- Worked on consumers in adjacent microservices, including DLX handling.
+- Delivered IP allocation (including Loopback and P2P between devices) under an incomplete and contradictory spec: gathered old and new requirements, checked the external API docs against actual behavior, added endpoints for the scenarios, and took the feature to production, including getting bugs fixed on the customer's API side.
+
+**Stack:** .NET 6 / ASP.NET Core 8, GraphQL, EF Core, MediatR, RabbitMQ, MassTransit, Quartz.NET, PostgreSQL, Docker, xUnit, GitLab
+
+---
+
+### Developer — Stoloto  
+*August 2020 — January 2021 · 6 months*
+
+Backend for a new lottery web service on ASP.NET Core.
 
 - CQRS + Event Sourcing, MediatR
-- REST API, пагинация, фильтрация, интеграции
-- Unit- и модульные тесты, рефакторинг legacy
-- Валидация JSON Schema (Newtonsoft.Json.Schema), генерация документации
-- Доработки WPF-клиента терминалов (MVVM)
+- REST API, pagination, filtering, integrations
+- Unit and module tests, legacy refactoring
+- JSON Schema validation (Newtonsoft.Json.Schema), documentation generation
+- Updates to a WPF terminal client (MVVM)
 
-**Стек:** ASP.NET Core, WPF, MediatR, CQRS, Event Sourcing, EF Core, GitLab, Jira, Confluence
-
----
-
-### Back-end программист — Школа дизайна НИУ ВШЭ  
-*Ноябрь 2019 — Август 2020 · 10 месяцев*
-
-Проектирование и разработка микросервисов продукта.
-
-- Сервисы на .NET Core 3.1 и Node.js (Express) для генерации PDF
-- Структура БД MongoDB, Docker-скрипты деплоя
-- REST API для внутренних проектов, миграция с Web Forms на API
-- Самостоятельное проектирование архитектуры сервисов
-
-**Стек:** .NET Core, ASP.NET Core, JavaScript, MongoDB, Docker
+**Stack:** ASP.NET Core, WPF, MediatR, CQRS, Event Sourcing, EF Core, GitLab, Jira, Confluence
 
 ---
 
-### Ранний IT-опыт — Softline, EY, Hostline, Типография Акура и др.  
+### Back-end developer — HSE Art and Design School  
+*November 2019 — August 2020 · 10 months*
+
+Designed and built product microservices.
+
+- .NET Core 3.1 and Node.js (Express) services for PDF generation
+- MongoDB schema, Docker deploy scripts
+- REST API for internal projects, migration from Web Forms to API
+- Independently designed service architecture
+
+**Stack:** .NET Core, ASP.NET Core, JavaScript, MongoDB, Docker
+
+---
+
+### Earlier IT experience — Softline, EY, Hostline, Akura Print Shop, and others  
 *2013 — 2019*
 
-Системный инженер / Helpdesk / младший программист: поддержка инфраструктуры, автоматизация, начало коммерческой разработки на C# / .NET (Windows Forms, Clean Architecture, PostgreSQL).
+Systems engineer / helpdesk / junior developer: infrastructure support, automation, and the start of commercial C# / .NET development (Windows Forms, Clean Architecture, PostgreSQL).
 
 <details class="chronology">
-<summary>Вся хронология — остальные места работы</summary>
+<summary>Full timeline — other roles</summary>
 <div class="chronology-body">
-<p class="chronology-note" hidden>Без повтора блоков выше (Amdocs, Столото, ВШЭ). По убыванию дат.</p>
+<p class="chronology-note" hidden>Does not repeat the blocks above (Amdocs, Stoloto, HSE). Newest first.</p>
 
 <div class="job">
-<strong>Разработчик C# — Айтик</strong><br>
-<em>Октябрь 2022 — Май 2023 · 8 месяцев</em>
-<p>Backend сервиса акций по продуктам компании (WCF).</p>
+<strong>C# Developer — Aytik</strong><br>
+<em>October 2022 — May 2023 · 8 months</em>
+<p>Backend for a company product promotions service (WCF).</p>
 </div>
 
 <div class="job">
-<strong>Разработчик систем предоставления ИТ-сервисов — ВТБ Капитал</strong><br>
-<em>Декабрь 2021 — Январь 2022 · 2 месяца</em>
-<p>Портал самообслуживания, автоматизация ИТ-сервисов и первой линии поддержки.</p>
-<p><strong>Стек:</strong> C#, PowerShell, System Center Service Manager / Orchestrator</p>
+<strong>IT Service Delivery Developer — VTB Capital</strong><br>
+<em>December 2021 — January 2022 · 2 months</em>
+<p>Self-service portal, IT service automation, and first-line support.</p>
+<p><strong>Stack:</strong> C#, PowerShell, System Center Service Manager / Orchestrator</p>
 </div>
 
 <div class="job">
-<strong>Младший программист — Типография Акура</strong><br>
-<em>Ноябрь 2018 — Август 2019 · 10 месяцев</em>
-<p>Корпоративное решение для производства: новый функционал, рефакторинг, SQL/триггеры, документация в Confluence, задачи в Jira.</p>
-<p><strong>Стек:</strong> C#, Windows Forms, Clean Architecture, PostgreSQL</p>
+<strong>Junior Developer — Akura Print Shop</strong><br>
+<em>November 2018 — August 2019 · 10 months</em>
+<p>Corporate production solution: new features, refactoring, SQL/triggers, Confluence docs, Jira.</p>
+<p><strong>Stack:</strong> C#, Windows Forms, Clean Architecture, PostgreSQL</p>
 </div>
 
 <div class="job">
-<strong>Инженер-программист C# WPF — Caspel</strong><br>
-<em>Октябрь 2018 — Ноябрь 2018 · 2 месяца</em>
-<p>Доработка функционала, исправление ошибок, настройка MS SQL и модулей ERP под клиентов.</p>
+<strong>C# WPF Software Engineer — Caspel</strong><br>
+<em>October 2018 — November 2018 · 2 months</em>
+<p>Feature work, bug fixes, MS SQL and ERP module setup for clients.</p>
 </div>
 
 <div class="job">
-<strong>Системный инженер — Softline</strong><br>
-<em>Июнь 2016 — Август 2017 · 1 год 3 месяца</em>
-<p>Аутсорс у заказчика (Herbalife): IT-проекты, сети, безопасность (SEP, PGP), поддержка пользователей, обучение, внедрение ПО и онлайн-касс.</p>
+<strong>Systems Engineer — Softline</strong><br>
+<em>June 2016 — August 2017 · 1 year 3 months</em>
+<p>Outsourcing at the client (Herbalife): IT projects, networks, security (SEP, PGP), user support, training, software and online cash-register rollout.</p>
 </div>
 
 <div class="job">
-<strong>Специалист IT help desk — EY Russia</strong><br>
-<em>Сентябрь 2014 — Май 2016 · 1 год 9 месяцев</em>
-<p>Поддержка IT-инфраструктуры офиса (~3000 сотрудников): ServiceNow, оборудование, сети, учётные записи.</p>
+<strong>IT Help Desk Specialist — EY Russia</strong><br>
+<em>September 2014 — May 2016 · 1 year 9 months</em>
+<p>IT infrastructure support for an office (~3000 employees): ServiceNow, hardware, networks, accounts.</p>
 </div>
 
 <div class="job">
-<strong>Специалист техподдержки — Hostline</strong><br>
-<em>Январь 2013 — Июнь 2013 · 6 месяцев</em>
-<p>Поддержка клиентов хостинга: сайты, CMS, домены, серверы, биллинг.</p>
+<strong>Technical Support Specialist — Hostline</strong><br>
+<em>January 2013 — June 2013 · 6 months</em>
+<p>Hosting client support: websites, CMS, domains, servers, billing.</p>
 </div>
 </div>
 </details>
 
 ---
 
-## Проекты
+## Projects
 
 ### [User Secrets Manager](https://github.com/kurskiev-t/UserSecretsManager)  
-Расширение для Visual Studio: удобное переключение секций user secrets (LOCAL / DEV / PROD) между проектами решения.
+Visual Studio extension: switch user secrets sections (LOCAL / DEV / PROD) across projects in a solution.
 
-- В [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=kurskiev-t.userSecretsManager) · **200+ скачиваний**
-- Backup / Restore, мультиязычные секции, открытие secrets-файла из IDE
+- On [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=kurskiev-t.userSecretsManager) · **200+ downloads**
+- Backup / Restore, multilingual sections, open the secrets file from the IDE
 
 ### [BuzzMini](https://github.com/kurskiev-t/BuzzMini)  
-Локальная offline push-to-talk диктовка на faster-whisper (Windows, NVIDIA CUDA, PyQt6). Без отправки аудио в облако.
+Local offline push-to-talk dictation on faster-whisper (Windows, NVIDIA CUDA, PyQt6). Audio never leaves the machine.
 
 ---
 
-## Образование
+## Education
 
-**Бакалавр** — МГТУ им. Н.Э. Баумана, Москва (2014)  
-Факультет информатики и систем управления · Информационные системы и телекоммуникации (**ИУ3**)
+**Bachelor's** — Bauman Moscow State Technical University, Moscow (2014)  
+Faculty of Informatics and Control Systems · Information Systems and Telecommunications (**IU3**)
 
 ---
 
-## Контакты
+## Contacts
 
 | | |
 | --- | --- |
-| **Телефон** | [+7 (903) 500-57-67](tel:+79035005767) |
+| **Phone** | [+7 (903) 500-57-67](tel:+79035005767) |
 | **Telegram** | [@timur_kurskiev](https://t.me/timur_kurskiev) |
 | **Email** | [kurskievtr@gmail.com](mailto:kurskievtr@gmail.com) |
 | **GitHub** | [github.com/kurskiev-t](https://github.com/kurskiev-t) |
-| **Город** | Москва |
+| **City** | Moscow |
 
 ---
 
-*PDF-резюме можно запросить по контактам выше.*
+*PDF resume available on request via the contacts above.*

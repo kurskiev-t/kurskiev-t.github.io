@@ -3,6 +3,11 @@
 
 @import "{{ site.theme }}";
 
+.lang-switch {
+  margin: 0.35rem 0 0.85rem;
+  font-size: 0.95em;
+}
+
 details.chronology {
   margin: 1.25rem 0 0.5rem;
   padding: 0.85rem 1rem 0.95rem;

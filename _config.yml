@@ -1,4 +1,4 @@
-title: Тимур Курскиев
+title: Timur Kurskiev
 logo: photo.jpg
 description: C# / .NET Backend Developer · Middle+
 show_downloads: false
@@ -6,3 +6,6 @@ theme: jekyll-theme-minimal
 plugins:
   - jekyll-seo-tag
 email: kurskievtr@gmail.com
+exclude:
+  - README.md
+  - README.ru.md
